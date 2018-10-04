@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Agent511 Demo: WebRTC Session Generator</title>
+</head>
+<body>
+    <h2>WebRTC Demo URL Generator</h2>
+<!-- Show Current Embed ID and MDN -->
+    <h3>Current Settings</h3>
+    <p>Embed ID: {{ embed_id }}</p>
+    <p>Embed Room: {{ embed_room }}</p>
+    <p>MDN: {{ mdn }}</p>
+
+<!-- Enter a new MDN which will be used for new MDN and room -->
+    <p>Enter a new MDN (will automatically create a new room)</p>
+
+    <div class="container">
+      <h1>MDN Entry</h1>
+      <form role="form" method="post" action="/ecreated">
+        <table>
+            <td>
+              <h3>MDN</h3>
+              <div class="form-group" "col-md-2">
+                <input type="number" name="mdn" class="form-control" placeholder="user mdn">
+              </div>
+            </td>
+          </tr>
+        </table>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div>
+    <p><a href=/index>Return to Index of URLs</a></p>
+</body>
+</html>

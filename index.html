@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Agent511 Demo: WebRTC Session Generator B</title>
+<!-- <img src="images/{{image}}" style="width:160px;height:50px;"> -->
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+    background-color: #6699CC;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+    float: left;
+    width: 30%;
+    background: #ccc;
+    padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+article {
+    float: left;
+    padding: 20px;
+    width: 70%;
+    background-color: #f1f1f1;
+}
+
+/* Clear floats after the columns */
+section:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the footer */
+footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+    nav, article {
+        width: 100%;
+        height: auto;
+    }
+}
+</style>
+</head>
+
+<body>
+
+    <header>
+    <img src="images/{{image}}" style="width:300px;height:90px;">
+    </header>
+
+    <section>
+    <h2>WebRTC SMS/MMS Integration Demo</h2>
+    <p>This demo provides test functions, a GUI, and demonstrates the RESTful interface that would be used operationally for live streaming video available on an invite only basis from a telecommunicator (TC). Using an Agent511 application, the TC may invite a user by a link sent over SMS (or customer or subscriber) to share an audio and video feed with the TC. This can be simulated in this GUI by Creating an embed instance (below), creating a refer page, and then sending an invite to the MDN of the user. Upon receipt of the invite the user MAY elect to share audio and video by clicking on the link and then clicking on the Start button in the window. The TC must join the same session in order to view the video and hear the audio. The simulated TC view is shown in a new tab in the browser running this demo.</p>
+    <h3>Testing Functions</h3>
+    <p><a href=/>Web application version and status</a></p>
+    <p><a href=/health>Web application health check</a></p>
+    <p><a href=/index>Index of URLs (this page)</a></p>
+    </section>
+
+    <section>
+    <h3>GUI Demo interface</h3>
+    <p><a href=/ecreated>Create Embed Instance by entering MDN</a></p>
+    <p><a href=/erefer target="_blank">Create Refer Page</a></p>
+    <p><a href=/einvite>Send Invite for Embed Session to MDN</a></p>
+    </section> 
+
+    <section>
+    <h3>RESTful Demo interface</h3>
+    <p>Replace mdn with a 10-digit MDN.</p>
+    <p><a href=/ecreated/{{ mdn }}>/ecreated/mdn Create Embed Instance by entering MDN</a></p>
+    <p><a href=/erefer/{{ mdn }} target="_blank">/erefer/mdn Create Refer Page</a></p>
+    <p><a href=/einvite/{{ mdn }}>/einvite/mdn Send Invite for Embed Session to MDN</a></p>
+    </section>
+
+    <footer>
+    <p>Copyright 2018. Good Egg Media, LLC.</p>
+    </footer>
+</body>
+</html>

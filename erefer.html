@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Agent511 Demo: WebRTC Session Generator</title>
+</head>
+<body>
+    <header>
+    <img src="images/{{image}}" style="width:300px;height:90px;">
+    </header>
+
+    <h3>You've been invited to share your audio and video.</h3>
+    <p>Click in the display below start transmitting your audio and video.</p>
+
+<!-- List the Tokbox Embed ID and MDN used -->
+    <p>Embed ID: {{ embed_id }}</p>
+    <p>MDN: {{ mdn }}</p>
+    <p>Embed Room: {{ embed_room }}</p>
+
+<!-- Opentok reference model for JavaScript call to OpenTok JS -->
+<!--    <h4>Opentok model for JavaScript</h4> -->
+<!--    <div id="otEmbedContainer" style="width:800px; height:640px"></div> -->
+<!--    <script src="{{referurl}}" allow="microphone;camera"></script> -->
+
+<!-- Opentok reference model for iframe -->
+    <h4>Opentok model for iframe</h4>
+    <iframe src="{{referurl}}&iframe=true" width=800 height=640 allow="microphone;camera" ></iframe>
+
+</body>
+</html>
